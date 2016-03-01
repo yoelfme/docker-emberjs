@@ -10,11 +10,14 @@ RUN apk update && apk upgrade
 RUN apk add nginx
 RUN mkdir -p /tmp/nginx/client-body
 
+# Install make dependencies
+RUN apk add make g++
+
 # Install Python and Nodejs
-RUN apk add python nodejs@community make \
+RUN apk add python nodejs@community \
   && rm -rf /var/cache/apk/*
 
-# Note: npm is v2.14.10
+# Install Ember CLI and Bower
 RUN npm install -g ember-cli@1.13.15
 RUN npm install -g bower@1.7.2
 
