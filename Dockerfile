@@ -11,7 +11,7 @@ RUN apk add nginx
 RUN mkdir -p /tmp/nginx/client-body
 
 # Install Python and Nodejs
-RUN apk add python nodejs@community \
+RUN apk add python nodejs@community make \
   && rm -rf /var/cache/apk/*
 
 # Note: npm is v2.14.10
