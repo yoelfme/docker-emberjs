@@ -10,10 +10,10 @@ RUN apk update && apk upgrade
 RUN apk add nginx
 RUN mkdir -p /tmp/nginx/client-body
 
-# Install make dependencies
-RUN apk add make g++
+# Install dependencies of alpine
+RUN apk add --update alpine-sdk
 
-# Install Python and Nodejs
+# Install Python, Nodejs and GIT
 RUN apk add python nodejs@community \
   && rm -rf /var/cache/apk/*
 
