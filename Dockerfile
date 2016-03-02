@@ -17,11 +17,3 @@ RUN npm config set registry http://registry.npmjs.org/
 
 # Add configuration for nginx
 ADD config/nginx.conf /etc/nginx/conf.d/default.conf
-
-# Create folder for storage the app
-RUN mkdir /code
-
-VOLUME ["code"]
-
-WORKDIR /code
-
