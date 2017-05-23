@@ -1,4 +1,4 @@
-FROM node:6.9.5
+FROM yoelfme/nginx-1.13.0_node-6
 
 MAINTAINER "Yoel Monzon" <yoelfme@hotmail.com>
 
